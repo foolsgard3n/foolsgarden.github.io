@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+          meow, welcome to my code (:
+  -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fool's garden</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon3.gif">
+    <script>
+          var originalTitle;
+            var offFocusTitle = "please come back";
+            
+            var interval;
+            
+            document.addEventListener('visibilitychange', event => {
+                if(document.hidden) {
+                    originalTitle = document.title;
+                    document.title = offFocusTitle;
+                    
+                    let swapState = "old";
+                    interval = setInterval(function () {
+                        if(swapState == "old") {
+                            swapState = "new";
+                            document.title = offFocusTitle;
+                        }
+                        else if (swapState == "new") {
+                            swapState = "old";
+                            document.title = originalTitle;
+                        }
+                    }, 1300);
+                } else {
+                    document.title = originalTitle;
+                    clearInterval(interval);
+                }
+            });
+    </script>
+    <style>
+    body {
+      background-image: url("/images/aaa.jpg");
+      background-size: 500px;
+      overflow: auto;
+      font-family: Aladin;
+      color: black;
+    }
+ * {cursor: url(https://ani.cursors-4u.net/others/oth-9/oth903.cur), auto !important;}
+     @font-face {
+      font-family: Aladin;
+      src: url(fonts/Aladin-Regular.ttf);
+      }
+      * { scrollbar-width: thin;}
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #bf1b31; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #5c101a; 
+    }
+    .headerimg {
+      width: 50vw;
+      height: 10vw;
+      margin-left: 23.5vw;
+      margin-right: 25vw;
+      margin-bottom: 2vh;
+      margin-top: 0px;
+      background-color: white;
+      float: left;
+      z-index: 100;
+      border-style: solid;
+      position: fixed;
+      box-shadow: 2px 2px #bf1b31;
+    }
+    .pheaderimg {
+      display: none;
+    }
+    .container {
+      width:97vw;
+      height: 80vh;
+      display: inline-block;
+      margin-top: 23vh;
+      margin-bottom: 2vh;
+      position: fixed;
+    }
+    .sidebar1, .sidebar2 {
+      height: 75vh;
+      width: 15vw;
+      position: fixed;
+    }
+    .sidebar1 {
+      margin-right: 82vw;
+      margin-left: 3vw;
+    }
+    .sidebar2 {
+      margin-left: 80vw;
+      margin-right: 3vw;
+      overflow: hidden;
+    }
+    .cc {
+      overflow: auto;
+      }
+    .content {
+      width: 60vw;
+      padding-left: 2vw;
+      padding-right: 2.5vw;
+      padding-bottom: 5vh;
+      height: 70vh;
+      margin-left: 17vw;
+      margin-right: 23.5vw;
+      position: absolute;
+      margin-bottom: 5vh;
+      overflow: auto;
+    }
+    .myfriendmark {
+        margin-left: 4vw;
+        height: 75vh;
+     }
+     #sidebar1a {
+       height: 25%;
+       width: 100%;
+     }
+     #sidebar2a {
+       height: 60%;
+       width: 100%;
+     }
+     #babycontent1 {
+       width: 45%;
+       margin-right: 2.5%;
+       margin-left: 0;
+       height: 20vh;
+       float: left;
+     }
+     #currently {
+       width: auto;
+       height: 17vh;
+       overflow: auto;
+     }
+     #aaa {
+       width: auto;
+       height: 15vh;
+       overflow: auto;
+       padding: 5px;
+     }
+     #babycontent2 {
+       width: 45%;
+       margin-left: 2.5%;
+       height: 20vh;
+       float: right;
+     }
+     
+     #autoplayer {
+        height: 15%;
+        width: 25%;
+        float: left;
+        margin-left: 2.5%;
+        margin-top: 2vh;
+        }
+        #help {
+          width: 100%;
+          height: 75%
+        }
+     #babycontent1, #babycontent2, #nbcon, #sidebar1a, #sidebar2a, #autoplayer, #nblevel, #friends{
+      background-color: white;
+      border-radius: 5px;
+      border: 1px solid #bf1b31;
+      box-shadow: 2px 2px #bf1b31;
+     }
+     #nbcon {
+       margin-top: 2vh;
+       width: 70%;
+       height: auto;
+       float: left;
+       background-color: black;
+     }
+     #nblevel {
+       width: 25%;
+       float: left;
+       margin-left: 2.5%;
+       margin-top: 2vh;
+       height: 35%;
+     }
+     
+      #statuscafe {
+      padding: .5em;
+      background-color: transparent;
+      border: 1px solid midnightblue;
+      border-radius: 10px;
+      width: auto;
+      height: 50%;
+      overflow: auto;
+      float: right;
+      margin: 10px;
+      }
+      #statuscafe-username {
+          margin-bottom: .5em;
+      }
+      #statuscafe-content {
+          margin: 0 1em 0.5em 1em;
+      }
+      #friends {
+        height: 30%;
+        float: left;
+        width: 25%;
+        margin-left: 2.5%;
+        margin-top: 2vh;
+      }
+      #friendsp {
+        padding: 5px;
+        overflow: auto;
+        height: 80%;
+        padding-top: 0px;
+      }
+     .title {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      padding: 5px;
+      height: 7px;
+      border-radius: 2px;
+      }
+      .x {
+        float: right;
+        margin-top: -25px;
+        height: 12px;
+      }
+      a {
+        text-decoration:none;
+        color:red;
+        transition: 0.3s;
+      }
+      a:hover {
+        color: grey;
+      }
+      .shake {
+        width: 8vw;
+        height: 8vh;
+        position: absolute;
+        z-index: 1000000;
+      }
+       .shake:hover {
+        animation: shake 0.8s;
+      transform: scale(2);
+   background-color: transparent;
+   filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.2));
+    transition: .1s;
+        animation-iteration-count: infinite;
+        
+      }
+      
+      @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+          }
+          
+          
+        /* Okay here's the slideshow pray for me guys */
+     .mySlides {
+       display: none;
+       width: 100%
+     }
+     .buttonleft {
+       float: left;
+     }
+     .buttonright {
+       float:right;
+     }
+     button {
+       background-color: red;
+     }
+     button:hover {
+       background-color: black;
+       color: white;
+       transition: 0.5s;
+     }
+     .caption {
+       background-color: rgba(0, 0, 0, 0.8);
+       margin-top: -10%;
+       height: 5vh;
+       color: white;
+       position: relative;
+       z-index: 1000;
+       width: auto;
+       padding-left: 20px;
+     }
+     .num {
+       background-color: rgba(0, 0, 0, 0.8);
+       color: white;
+       height: auto;
+       width: 50px;
+       margin-top: 0%;
+       z-index: 1000;
+     }
+     .slide {
+       animation: plsfade 1s;
+     }
+     @keyframes plsfade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+     /* slideshow end*/
+ .topnav {
+   display: none;
+ }
+    @media only screen and (orientation: portrait) {
+      .sidebar1, .sidebar2 {
+        display: none;
+      }
+      .content {
+        width: 75vw;
+        margin-left: 8vw;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        margin-bottom: 5vh;
+      }
+      .headerimg {
+        display: none;
+      }
+      .pheaderimg {
+        display: block;
+        width: 75vw;
+        height: 15vw;
+        margin-left: 10vw;
+        margin-right: 25vw;
+        margin-bottom: 3vh;
+        margin-top: 0px;
+        background-color: white;
+        z-index: 100;
+        border-style: solid;
+      box-shadow: 2px 2px #bf1b31;
+      }
+      .container {
+        margin-top:  3vh;
+      }
+      .shake {
+        width: 15vw;
+      }
+      #nbcon {
+        height: auto;
+     }
+     #nblevel {
+       width: 50%;
+     }
+      #statuscafe {
+      padding: .5em;
+      background-color: transparent;
+      border: 1px solid midnightblue;
+      border-radius: 5px;
+      width: auto;
+      height: 30%;
+      overflow: auto;
+      float: right;
+      margin: 10px;
+      }
+      #friends {
+        width: 40%;
+        }
+      #statuscafe-username {
+          margin-bottom: .5em;
+      }
+      #statuscafe-content {
+          margin: 0 1em 0.5em 1em;
+      }
+      .topnav {
+        display: flex;
+        
+      }
+      .topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: white;
+  }
+      .topnav #links {
+        display: none;
+        background: black;
+      }
+    }
+    </style>
+  </head>
+  
+  <body>
+    <div class="topnav">
+        <center>
+          <div id="links">
+            <a href="about.html">About</a>
+            <a href="/mansion/index.html">Mansion (Incomplete)</a>
+            <a href="/blog/index.html">Blog</a>
+            <a href="/shrines/index.html">Shrines</a>
+            <a href="credits.html">Credits</a>
+          </div>
+          </center>
+          <a href="javascript:void(0);" class="icon" onclick="ham()">
+            <i><div class="silly"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" width="20px"></div></i>
+          </a>
+        </div>
+        <script>
+        function ham() {
+          var x = document.getElementById("links");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
+  <div class="headerimg">
+    <img src="/images/header.png" width="100%" height="100%">
+  </div>
+  <div class="pheaderimg">
+  <img src="/images/header.png" width="100%" height="100%">
+  </div>
+        
+  <div class="container">
+  
+    <div class="sidebar1">
+      <div id="sidebar1a" >
+        <div class="title">
+          <div class="x">
+            <p><u>x</u></p>
+          </div>
+        </div>
+              <table style="border-collapse: collapse; width: 100%; height: 100%; margin-left: auto; margin-right: auto; box-shadow: 2px 2px #bf1b31; color: white;">
+          <tbody>
+          <tr style="padding: 3px;">
+            <td style="padding: 3px; background-color: #2e2e2e;"><center><a href="about.html">about</a></center></td>
+          </tr>
+          <tr style="padding: 3px; background-color:black;">
+            <td style="padding: 3px;"><center><a href="mansion/index.html">mansion (WIP)</a></center></td>
+          </tr>
+          <tr style="padding: 3px; background-color:#2e2e2e;">
+            <td style="padding: 3px;"><center><a href="blog/index.html">blog</a></center></td>
+          </tr>
+          <tr style="padding: 3px; background-color: black;">
+            <td style="padding: 3px;"><center><a href="shrines/index.html">shrines</a></center></td>
+          </tr>
+          <tr style="padding: 3px; background-color:#2e2e2e;">
+            <td style="padding: 3px;"><center><a href="credits.html">credits</a></center></td>
+          </tr>
+        </tbody></table>
+      </div>
+      <p> </p>
+      <br>
+      <div id="sidebar2a">
+              <div class="title">
+              <div class="x">
+            <p><u>x</u></p>
+          </div>	
+        </div>
+           <iframe src="https://www3.cbox.ws/box/?boxid=3525982&boxtag=asfA8F" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" style="float:right;"></iframe>
+      </div>
+      <br>
+    </div>
+    <div class="cc">
+    <div class="content"><div class="shake" style="margin-left: 47%;">
+    <img src="/images/sticker1.png" width=100%>
+  </div>
+      <div id="babycontent1">
+        <div class="title">
+        <div class="x">
+            <p><u>x</u></p>
+          </div>
+          
+        </div>
+         <div id="aaa">
+          <p>Hello! This site is a source of self-expression and a digital record that I exist.</p>
+        <p>Feel free to look around! Please be aware, though, that most pages aren't finished and probably won't be for a while! Sorry about that. I'm also redoing the existing pages to be more responsive.</p>
+        <p>Not sure what else to say here, so cheers!</p>
+        </div>
+      </div>
+      <div id="babycontent2">
+        <div class="title">
+        <div class="x">
+            <p><u>x</u></p>
+          </div>
+        </div>
+        <div id="currently">
+        <center><h2>Currently</h2>
+            <details>
+              <summary>Reading</summary>
+              Crime and Punishment (Fyodor Dostoesvky)
+            </details>
+            <details>
+              <summary>Watching</summary>
+              Persona 5 - The Stage
+            </details>
+            <details>
+              <summary>Playing</summary>
+              Persona Q2: New Cinema Labrinyth
+            </details>
+            <details>
+              <summary>Listening to</summary>
+              Rivers is a Vampire (Bear Ghost)
+            </details>
+            <details>
+              <summary>Working on</summary>
+              Redoing this site!
+            </details>
+            <br>
+            </center>
+            </div>
+      </div>
+      <div id="nbcon">
+        <div class="title">
+        <div class="x">
+            <p><u>x</u></p>
+          </div>
+        </div>
+        <div class="mySlides">
+        <div class="num"><p style="margin-top:-12px;">1/3</p></div>
+        <img class="slide" src="/images/slides/dailyart.png" width=100%>
+        
+            <div class="caption">
+            <p>Check out <a href="/mansion/gallery/365/index.html"><u>my Daily Art</u></a></p>
+            </div>
+        </div>
+        <div class="mySlides">
+        <div class="num"><p style="margin-top:-12px;">2/3</p></div>
+        <img class="slide" src="/images/slides/update.gif" width=100%>
+        
+            <div class="caption">
+            <p>Site updates are <a href="/updates.html"><u>here!</u></a></p>
+            </div>
+        </div>
+        <div class="mySlides">
+        <div class="num"><p style="margin-top:-12px;">2/3</p></div>
+        <img class="slide" src="/images/slides/akechi_ad.gif" width=100%>
+        <div class="caption">
+            <p>Find out more <a href="/shrines/persona/akechi.html"><u>here</u></a>!!</p>
+            </div>
+        </div>
+        <button class="buttonleft" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="buttonright" onclick="plusDivs(1)">&#10095;</button>
+  
+              <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
+            <script>
+                        var slideIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > x.length) {slideIndex = 1}
+              x[slideIndex-1].style.display = "block";
+              setTimeout(carousel, 20000);
+            }
+            </script>
+      </div>
+      <div id="autoplayer">
+        <div class="title">
+        <div class="x">
+            <p><u>x</u></p>
+          </div>
+        </div>
+        <audio id="help"   controls controlsList="nodownload" loop autoplay>
+          <source src="/music/Awakenings.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div id="nblevel">
+      <div class="title">
+        <div class="x">
+            <p><u>x</u></p>
+          </div>
+          </div>
+       <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=oleander" defer></script>
+      </div>
+      <div id="friends">
+      <div class="title">
+        <div class="x">
+            <p><u>x</u></p>
+          </div>
+          </div>
+          <div id="friendsp">
+          <h4><a href="https://basilfueille.123guestbook.com">My guestbook!</a></h4>
+          <h4>And check out my friends' sites! (Not fully complete)</h4>
+          <p><a href="https://64littleplasticcubes.neocities.org">Couch</a></p>
+          <p><a href="https://sundial.neocities.org">Enzo</a></p>
+          <p><a href="https://thecorobocorner.neocities.org">Corobo</a></p>
+          <p><a href="https://memer.online">Memer</a></p>
+          </div>
+      </div>
+    </div>
+    </div>
+    <div class="sidebar2">
+      <div class="myfriendmark">
+          <marquee direction="up" onMouseOver="this.stop()" onMouseOut="this.start()" height="600px">
+            <img src="images/stamps/12.png">
+             <br>
+            <img src="/images/stamps/32.gif">
+             <br>
+            <img src="/images/stamps/3ds.png">
+             <br>
+            <img src="/images/stamps/3dsowner.png">
+             <br>
+            <img src="/images/stamps/69.gif">
+             <br>
+            <img src="/images/stamps/akechisilly.png">
+             <br>
+            <img src="/images/stamps/alien.gif">
+             <br>
+            <img src="/images/stamps/allglotcat.png">
+             <br>
+            <img src="/images/stamps/animalcrossing.gif">
+             <br>
+            <img src="/images/stamps/arcade.png">
+             <br>
+            <img src="/images/stamps/astral.png">
+             <br>
+            <img src="/images/stamps/attack.gif">
+             <br>
+            <img src="/images/stamps/bacon.png">
+             <br>
+            <img src="/images/stamps/bacteria.gif">
+             <br>
+            <img src="/images/stamps/bathroom.png" width="99" height="55">
+             <br>
+            <img src="/images/stamps/benis.png">
+             <br>
+            <img src="/images/stamps/bi.gif">
+             <br>
+            <img src="/images/stamps/blender_stamp.gif">
+             <br>
+             <img src="/images/stamps/bob1.png">
+             <br>
+             <img src="/images/stamps/bob2.gif">
+             <br>
+            <img src="/images/stamps/bodies.gif" width="97" height="55">
+             <br>
+            <img src="/images/stamps/borgor.gif">
+             <br>
+            <img src="/images/stamps/breakdown.png">
+             <br>
+            <img src="/images/stamps/brick.jpg">
+             <br>
+             <img src="/images/stamps/broccoli.gif">
+             <br>
+            <img src="/images/stamps/bubble.gif">
+             <br>
+            <img src="/images/stamps/bubbles.gif">
+             <br>
+             <img src="/images/stamps/burrito.png">
+             <br>
+            <img src="/images/stamps/burst.png">
+             <br>
+            <img src="/images/stamps/cannabilism.gif">
+             <br>
+            <img src="/images/stamps/carrd.png">
+             <br>
+            <img src="/images/stamps/catgreeting.gif">
+             <br>
+            <img src="/images/stamps/celeste.png">
+             <br>
+            <img src="/images/stamps/checkers.png">
+             <br>
+            <img src="/images/stamps/childish.gif">
+             <br>
+            <img src="/images/stamps/citation-needed.png">
+             <br>
+            <img src="/images/stamps/city.png">
+             <br>
+            <img src="/images/stamps/cloud.png">
+             <br>
+            <img src="/images/stamps/coatl.png">
+             <br>
+            <img src="/images/stamps/confidant.png">
+             <br>
+            <img src="/images/stamps/cringe.png">
+             <br>
+            <img src="/images/stamps/dancinkittycat.gif">
+             <br>
+            <img src="/images/stamps/danckity.gif">
+             <br>
+            <img src="/images/stamps/daydreamer.gif">
+             <br>
+            <img src="/images/stamps/digitalartists.gif">
+             <br>
+            <img src="/images/stamps/discord-user.png">
+             <br>
+            <img src="/images/stamps/dizzy.gif">
+             <br>
+            <img src="/images/stamps/dog.gif">
+             <br>
+            <img src="/images/stamps/ds2.png" width="99" height="55">
+             <br>
+            <img src="/images/stamps/dsno3ds.gif">
+             <br>
+            <img src="/images/stamps/eat.gif">
+             <br>
+            <img src="/images/stamps/eatingchaps.gif">
+             <br>
+            <img src="/images/stamps/eeveening.png">
+             <br>
+            <img src="/images/stamps/egg.png">
+             <br>
+            <img src="/images/stamps/evilbenis.png">
+             <br>
+            <img src="/images/stamps/eyes.gif">
+             <br>
+            <img src="/images/stamps/fagit.png">
+             <br>
+            <img src="/images/stamps/fieri.gif">
+             <br>
+            <img src="/images/stamps/fire.png">
+             <br>
+            <img src="/images/stamps/fish.gif">
+             <br>
+            <img src="/images/stamps/froggy.gif">
+             <br>
+            <img src="/images/stamps/frogs.gif">
+             <br>
+            <img src="/images/stamps/furret.png">
+             <br>
+            <img src="/images/stamps/gamergender.png">
+             <br>
+            <img src="/images/stamps/garf.png">
+             <br>
+            <img src="/images/stamps/gatekeeping.png">
+             <br>
+            <img src="/images/stamps/gayrightspikachu.png">
+             <br>
+            <img src="/images/stamps/ggg.gif">
+             <br>
+            <img src="/images/stamps/giantrat.png">
+             <br>
+            <img src="/images/stamps/glitter.png">
+             <br>
+            <img src="/images/stamps/glitterstars.png">
+             <br>
+            <img src="/images/stamps/goodkid.gif">
+             <br>
+            <img src="/images/stamps/guystuffcutestuff.gif">
+             <br>
+            <img src="/images/stamps/haha.gif">
+             <br>
+            <img src="/images/stamps/harvestmoon.gif">
+             <br>
+            <img src="/images/stamps/headphonecat.gif">
+             <br>
+            <img src="/images/stamps/hearts.gif">
+             <br>
+            <img src="/images/stamps/hell.png">
+             <br>
+            <img src="/images/stamps/hey.png"  width="99" height="55">
+             <br>
+            <img src="/images/stamps/hit.png">
+             <br>
+            <img src="/images/stamps/i have no mouth 2.png">
+             <br>
+            <img src="/images/stamps/ice.png">
+             <br>
+            <img src="/images/stamps/ice2.png">
+             <br>
+            <img src="/images/stamps/iiwii.png">
+             <br>
+            <img src="/images/stamps/iloveakechi.png">
+             <br>
+            <img src="/images/stamps/ilovedarktypes.png">
+             <br>
+            <img src="/images/stamps/ilovemyds.png">
+             <br>
+            <img src="/images/stamps/ilovestars.gif">
+             <br>
+            <img src="/images/stamps/ilovestars2.png">
+             <br>
+            <img src="/images/stamps/ilovestars3.png">
+             <br>
+            <img src="/images/stamps/ilycay.png" width="99" height="55">
+             <br>
+            <img src="/images/stamps/im.png">
+             <br>
+            <img src="/images/stamps/isopod.png">
+             <br>
+            <img src="/images/stamps/isuredoloverats.png">
+             <br>
+            <img src="/images/stamps/jelly.gif">
+             <br>
+            <img src="/images/stamps/jermacofee.png">
+             <br>
+            <img src="/images/stamps/kao.png">
+             <br>
+            <img src="/images/stamps/kermit.gif" width="99" height="55">
+             <br>
+            <img src="/images/stamps/kill.png">
+             <br>
+            <img src="/images/stamps/kittycatttdance.gif">
+             <br>
+            <img src="/images/stamps/kity.gif">
+             <br>
+            <img src="/images/stamps/krrmie.png">
+             <br>
+            <img src="/images/stamps/kuromi.png">
+             <br>
+            <img src="/images/stamps/laceroses.png">
+             <br>
+            <img src="/images/stamps/lava.gif">
+             <br>
+            <img src="/images/stamps/lazy.png">
+             <br>
+            <img src="/images/stamps/lightning.png">
+             <br>
+            <img src="/images/stamps/littleboy.png">
+             <br>
+            <img src="/images/stamps/llama.png">
+             <br>
+            <img src="/images/stamps/lsd.png">
+             <br>
+            <img src="/images/stamps/luigi.jpg">
+             <br>
+            <img src="/images/stamps/math.png">
+             <br>
+            <img src="/images/stamps/medicine.gif">
+             <br>
+            <img src="/images/stamps/meow.png">
+             <br>
+             <img src="/images/stamps/meowmeowmeow.png">
+             <br>
+            <img src="/images/stamps/miiverse.png">
+             <br>
+            <img src="/images/stamps/miku.gif">
+             <br>
+            <img src="/images/stamps/moon.png">
+             <br>
+            <img src="/images/stamps/neil.png">
+             <br>
+            <img src="/images/stamps/nekoatsume.gif">
+             <br>
+            <img src="/images/stamps/neo.png">
+             <br>
+            <img src="/images/stamps/neon.png">
+             <br>
+            <img src="/images/stamps/neon2.gif">
+             <br>
+            <img src="/images/stamps/neon2.png">
+             <br>
+            <img src="/images/stamps/ohio.png">
+             <br>
+            <img src="/images/stamps/ohno.png">
+             <br>
+            <img src="/images/stamps/ohworm.png">
+            <br>
+            <img src="/images/stamps/ouija.gif">
+             <br>
+            <img src="/images/stamps/paint.png">
+             <br>
+            <img src="/images/stamps/pantone-green.png">
+             <br>
+            <img src="/images/stamps/pantone-holo.gif">
+             <br>
+            <img src="/images/stamps/pantone-peach.png">
+             <br>
+            <img src="/images/stamps/pantone-peach2.png">
+             <br>
+            <img src="/images/stamps/pantone-rose.png">
+             <br>
+            <img src="/images/stamps/pantone-stardust.gif">
+             <br>
+            <img src="/images/stamps/paranoid.gif">
+             <br>
+            <img src="/images/stamps/peaches.png">
+             <br>
+            <img src="/images/stamps/pee.png">
+             <br>
+            <img src="/images/stamps/peeps.png">
+             <br>
+            <img src="/images/stamps/phoenixcoffee.gif">
+             <br>
+            <img src="/images/stamps/pikachu.gif">
+             <br>
+            <img src="/images/stamps/plushies.gif">
+             <br>
+            <img src="/images/stamps/praisejapan.gif">
+             <br>
+            <img src="/images/stamps/punch.gif">
+             <br>
+            <img src="/images/stamps/rain.gif">
+             <br>
+            <img src="/images/stamps/rain2.gif">
+             <br>
+            <img src="/images/stamps/retro.gif">
+             <br>
+            <img src="/images/stamps/rickroll.gif">
+             <br>
+            <img src="/images/stamps/road.png">
+             <br>
+            <img src="/images/stamps/rockon.gif">
+             <br>
+            <img src="/images/stamps/rocks.gif">
+             <br>
+            <img src="/images/stamps/rolypoly.png">
+             <br>
+            <img src="/images/stamps/sbd.gif">
+             <br>
+            <img src="/images/stamps/scrub.png">
+             <br>
+            <img src="/images/stamps/sea.gif">
+             <br>
+            <img src="/images/stamps/shutmeowth.png">
+             <br>
+            <img src="/images/stamps/silly2.png">
+             <br>
+            <img src="/images/stamps/sneet.png">
+             <br>
+            <img src="/images/stamps/sphealwithit.gif">
+             <br>
+            <img src="/images/stamps/squirtle.png">
+             <br>
+            <img src="/images/stamps/starry.gif">
+             <br>
+            <img src="images/stamps/static.png">
+             <br>
+            <img src="/images/stamps/strawberries.png">
+             <br>
+            <img src="/images/stamps/stupid.png">
+             <br>
+            <img src="/images/stamps/suicied.png">
+             <br> 
+            <img src="/images/stamps/sunglasses.png">
+             <br>
+            <img src="/images/stamps/tablet user.gif">
+             <br>
+            <img src="/images/stamps/tarot-lover.png">
+             <br>
+            <img src="/images/stamps/thang.png">
+             <br>
+            <img src="/images/stamps/tired.png">
+             <br>
+            <img src="/images/stamps/thog.png">
+             <br>
+            <img src="/images/stamps/tomonok.png">
+             <br>
+            <img src="/images/stamps/transformice.gif">
+             <br>
+            <img src="/images/stamps/uarewrong.png">
+             <br>
+            <img src="/images/stamps/venom.gif">
+             <br>
+            <img src="/images/stamps/vibe.png">
+             <br>
+            <img src="/images/stamps/virtualinsanity.gif">
+             <br>
+            <img src="/images/stamps/vore.png">
+             <br>
+            <img src="/images/stamps/water.gif">
+             <br>
+            <img src="/images/stamps/weallgotohell.gif">
+             <br>
+            <img src="/images/stamps/weallloveyou.png"  width="99" height="55">
+             <br>
+            <img src="/images/stamps/weezer.png">
+             <br>
+            <img src="/images/stamps/wiggly.png">
+             <br>
+            <img src="/images/stamps/wooper.png">
+             <br>
+            <img src="/images/stamps/worse.png">
+             <br>
+            <img src="/images/stamps/ww.png">
+             <br>
+            <img src="/images/stamps/yeahimsilly.jpg">
+             <br>
+            <img src="/images/stamps/yee.png">
+             <br>
+            <img src="/images/stamps/yotsuba.jpg">
+             <br>
+            <img src="/images/stamps/yellingbird.png">
+             <br>
+            <img src="/images/stamps/youmustdie.png">
+             <br>
+            <img src="images/stamps/young.png">
+        </marquee>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

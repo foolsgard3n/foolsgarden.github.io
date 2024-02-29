@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--
+  ░░                                                                                      
+░░                                                                                      
+░░                    ░░██        ██████████        ██        ████                      
+░░                    ██▒▒██  ████          ████  ██▒▒██    ██▒▒▒▒██                    
+░░                    ██▒▒▒▒██                  ██▒▒▒▒██    ██▒▒▒▒██                    
+░░                    ██▒▒▒▒                      ▒▒▒▒██      ██▒▒▒▒██                  
+░░      ░░            ██▒▒                          ▒▒██      ██▒▒▒▒██    ░░            
+░░                  ██      ████  ▒▒▒▒▒▒▒▒▒▒  ████      ██      ██▒▒▒▒██                
+░░                ██        ████▒▒▒▒▒▒▒▒▒▒▒▒▒▒████        ██    ██▒▒▒▒██                
+░░                ██          ▒▒▒▒▒▒██████▒▒▒▒            ██    ██▒▒▒▒██                
+        ░░      ░░██        ▒▒▒▒██▒▒▒▒██▒▒▒▒██▒▒          ██░░  ██▒▒▒▒██  ░░      ░░    
+░░                  ██      ▒▒▒▒▒▒████▒▒████▒▒▒▒        ████    ██▒▒▒▒██                
+░░                    ██      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒        ██    ████▒▒▒▒██                  
+                        ████    ▒▒▒▒▒▒▒▒▒▒▒▒      ████        ██▒▒▒▒██                  
+                          ████████          ████████          ██▒▒██                    
+░░                        ██      ██████████                        ██                  
+░░                        ██                                        ██                  
+░░              ░░        ██                                        ██            ░░    
+░░                        ██                                      ▒▒██                  
+░░                        ██▒▒    ██        ██      ██      ██▒▒▒▒▒▒██                  
+░░                          ██▒▒▒▒██        ██  ▒▒  ██  ██████▒▒▒▒██                    
+░░                          ██▒▒▒▒▒▒██████████▒▒▒▒██████▒▒██▒▒▒▒▒▒██                    
+░░    You have been         ██▒▒▒▒▒▒██    ██▒▒▒▒  ██  ██▒▒██▒▒▒▒██                      
+░░      blessed               ██▒▒▒▒██    ██▒▒▒▒██    ████▒▒▒▒▒▒██                      
+░░                            ██▒▒▒▒██    ██▒▒▒▒██      ██▒▒▒▒██                        
+░░                    ░░        ████        ████          ████                          
+░░                                                                                      
+░░                                                                                      
+                                                                                        
+
+  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fool's garden</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <script>
+          var originalTitle;
+            var offFocusTitle = "please come back";
+            
+            var interval;
+            
+            document.addEventListener('visibilitychange', event => {
+                if(document.hidden) {
+                    originalTitle = document.title;
+                    document.title = offFocusTitle;
+                    
+                    let swapState = "old";
+                    interval = setInterval(function () {
+                        if(swapState == "old") {
+                            swapState = "new";
+                            document.title = offFocusTitle;
+                        }
+                        else if (swapState == "new") {
+                            swapState = "old";
+                            document.title = originalTitle;
+                        }
+                    }, 1300);
+                } else {
+                    document.title = originalTitle;
+                    clearInterval(interval);
+                }
+            });
+    </script>
+  <style>
+        body {
+          background-image: url("images/music.jpg");
+      background-size: 250px; 
+      font-family: Caviar;
+      }
+      #container {
+        display: flex;
+      }
+      #statuscafe {
+      padding: .5em;
+      background-color: #f5d0b5;
+      border: 1px solid midnightblue;
+      width: 150px;
+      height: 100px;
+      overflow: auto;
+      float: right;
+      margin: 10px;
+      }
+      #statuscafe-username {
+          margin-bottom: .5em;
+      }
+      #statuscafe-content {
+          margin: 0 1em 0.5em 1em;
+      }
+      .mainbox {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            width: 700px;
+            height: 645px;
+            padding: 10px;
+            border: 5px double;
+            background-color: #f5d0b5;
+            float: left;
+            overflow: auto;
+      }
+      .leftsidebar {
+            margin-left: 25px;
+            margin-right: 35px;
+            margin-top: 25px;
+            margin-bottom:25px;
+            width: 150px;
+            height: auto;
+            padding: 10px;
+            border: 5px double;
+            background-color: #f5d0b5;
+            float: left;
+            height:645px;
+      }
+      .rightsidebar {
+            margin-left: 35px;
+            margin-right: 25px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            width: 150px;
+            height: auto;
+            padding: 10px;
+            background-color: rgba(0,0,0,0);
+            float: left;
+            height:645px;
+      }
+      .meow {
+        border: 5px double;
+        background-color: #f5d0b5;
+        margin: 0px;
+      }
+      .currently {
+        border: 5px double;
+        background-color: #f5d0b5;
+        margin: 0px;
+        height: 145px;
+        overflow: auto;
+      }
+      .updatebox {
+        overflow:auto;
+        border: 1px;
+        border-style: solid;
+        background-color:white;
+        margin-left: 5px;
+        margin-right:5px;
+        font-size: 10px;
+        font-family: Caviar;
+        width: auto;
+        height:75px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+         }
+         .pain {
+           margin: 5px;
+         }
+      .anotherbox {
+        overflow: auto;
+        border: 1px;
+        border-style: solid;
+        margin: 10px;
+        font-size: 10px;
+        font-family: Caviar;
+        width: auto;
+        height: 75px;
+        background-color: white;
+      }
+      .indexnav {
+        width: 160px;
+        height: 119px;
+        border: solid;
+        border-width: 1px;
+        border-color: black;
+        background-color: #f5d0b5;
+        float:left;
+        margin: 10px;
+      }
+      .dotd {
+        border: solid;
+        width: auto;
+        height: auto;
+      }
+        .chatbox {
+          width:250px;
+          height:auto;
+        }
+      * {cursor: url(https://cur.cursors-4u.net/others/oth-5/oth472.cur), auto !important;}
+      
+       @font-face {
+      font-family: Caviar;
+      src: url(fonts/CaviarDreams.ttf);
+      }
+      
+      details {
+        font-size: smaller;
+      }
+      hr {
+        color: black
+      }
+      
+      ::-webkit-scrollbar {
+        width: 5px;
+       }
+            
+     ::-webkit-scrollbar-track {
+       background: #f1f1f1; 
+      }
+             
+      ::-webkit-scrollbar-thumb {
+        background: #825e44; 
+       } 
+      ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+      }
+      a {
+        text-decoration:none;
+        color:black;
+        transition: 0.3s;
+      }
+      a:hover {
+        color: white;
+      }
+      
+   </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="leftsidebar">
+      <center>
+      <img src="https://foolsgarden.neocities.org/images/tumblr_n8gptm0DB71r7y61oo1_100.gif">
+      </center>
+      <h2> </h2>
+        <table style="border-collapse: collapse; width: 90%; margin-left: auto; margin-right: auto;">
+    <tbody><tr style="padding: 3px; background-color: #c48e82;">
+      <td style="padding: 3px;"><a href="index.html"><img src="https://foolsgarden.neocities.org/images/19a0911a.gif"> index</a></td>
+    </tr>
+    <tr style="padding: 3px;">
+      <td style="padding: 3px;"><a href="about.html"><img src="https://foolsgarden.neocities.org/images/tumblr_6dc9940c9248843047d2367f3050fae2_cdd2239e_75.gif"> about</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color:#c48e82;">
+      <td style="padding: 3px;"><a href="home/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_a9b612e691d1f2ece8e5201bb29d7e23_55bb3590_75.gif"> home</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color:#f5d0b5">
+      <td style="padding: 3px;"><a href="blog/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_b3a06ae05793737ca526e52dc754a21e_6156d4f3_75.gif"> blog</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color: #c48e82;">
+      <td style="padding: 3px;"><a href="shrines/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_fdb41db1f1f011a3b3cd06f70602ead1_8f1c9e4e_75.gif"> shrines</a></td>
+    </tr>
+    <tr style="padding: 3px;">
+      <td style="padding: 3px;"><a href="credits.html"><img src="https://foolsgarden.neocities.org/images/tumblr_fdb41db1f1f011a3b3cd06f70602ead1_8f1c9e4e_75.gif"> credits</a></td>
+    </tr>
+  </tbody></table>
+  <h2> </h2>
+  <center>
+  <img src="https://foolsgarden.neocities.org/images/blinkie1.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie2.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie3.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie4.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie5.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie6.gif">
+  </center>
+  <h2> </h2>
+      <table style="border-collapse: collapse; width: 90%; margin-left: auto; margin-right: auto; background-color:#c48e82;">
+        <tr style="padding: 3px;">
+          <td style="padding: 3px;"><a href="https://neocities.org/site/foolsgarden"><img src="https://foolsgarden.neocities.org/images/cat1.gif"> site profile</a></td>
+          </tr>
+        <tr style="padding: 3px; background-color:#c48e82;">
+          <td style="padding: 3px;"><a href="https://basilfueille.123guestbook.com"><img src="https://foolsgarden.neocities.org/images/cat2.gif"> guestbook</a></td>
+        </tr>
+      </tbody></table>
+      </div>
+      
+      <div class="mainbox">
+      <center>
+        <h2>Welcome to Fool's Garden</h2>
+         </center>
+         <div class="indexnav">
+          <center>
+          <h3>Index</h3>
+          <p>&lt;&lt;  <u>I</u>  <u><a href="index2.html">&gt;&gt;</a></u></p>
+          </center>
+         </div>
+         <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=oleander" defer></script>
+         <center>
+        <p>Hello! This site is a source of self-expression and a digital record that I exist.</p>
+        <p>Feel free to look around! Please be aware, though, that I'm fully redoing this site on another platform, so major changes are coming soon!</p>
+        <p>Not sure what else to say here, so cheers!</p>
+         </center>
+         <hr>
+         <center>
+         <div class="dotd">
+         <h3>HEY CHECK OUT MY DRAWING AT THE DAY <u><a href="/home/gallery/365/index.html">HERE</a></u></h3>
+         </div>
+         </center>
+         <hr>
+        <iframe width="314" height="300" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Basil Jr&dob=1676919783&gender=m&element=Air&pet=https%3A%2F%2Ffoolsgarden.neocities.org%2Fimages%2Fbasiljr.png&map=town.gif&background=wood.jpg&tablecolor=black&textcolor=white" frameborder="0" float:right;></iframe>
+        <iframe src="https://www3.cbox.ws/box/?boxid=3525982&boxtag=asfA8F" width="300px" height="300px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" style="float:right;"></iframe>	
+        <h4>Cool sites to check out!</h4>
+        <center><marquee onMouseOver="this.stop()" onMouseOut="this.start()"><a href="https://gothiclolita.neocities.org/"><img src="https://gothiclolita.neocities.org/gothiclolita.png" width="88px"></a><a href="https://cyberneticdryad.neocities.org"><img src="https://cyberneticdryad.neocities.org/graphics/socials/cdbutton2.gif" width="88px"></a><a href="https://ninacti0n.neocities.org"><img src="https://ninacti0n.neocities.org/assets/RS%20animated%20button.gif"></a><a href="https://garudyne.neocities.org/" target="_blank"><img src="https://garudyne.neocities.org/button%20(1).gif" alt="button"></a><a href="https://cloverbell.neocities.org/"><img src="https://cloverbell.neocities.org/icons/cloverbellbanner.gif"></a><a href="https://aquariumaesthetic.neocities.org/"><img src="https://iili.io/HPxEQ9a.gif"></a></marquee></center>
+        <hr>
+        <h3>SITEMAP</h3>
+        <ul>
+          <u>
+          <li><a href="">Index (YOU ARE HERE!)</a></li>
+          <li><a href="index2.html">Index II</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="home.html">Home</a></li>
+            <ul>
+              <li><a href="home/noteboard.html">Noteboard</a></li>
+              <li><a href="home/library.html">Library</a></li>
+              <li><a href="home/music.html">Music</a></li>
+              <li><a href="home/quizzes.html">Quizzes</a></li>
+                <ul>
+                  <li><a href="home/quizzes/webmaster.html">How well do you know the webmaster?</a></li>
+                </ul>
+            </ul>
+          <li><a href="blog.html">Blog</a></li>
+            <ul>
+              <li><a href="blog/srs.html">Essays and such</a></li>
+              <li><a href="blog/diary.html">Diary</a></li>
+            </ul>
+          <li><a href="shrines.html">Shrines</a></li>
+            <ul>
+              <li><a href="shrines/pokemon.html">Pokemon</a></li>
+              <li><a href="shrines/blaseball.html">Blaseball</a></li>
+              <li><a href="shrines/3ds.html">3DS</a></li>
+              <li><a href="shrines/willwood.html">Will Wood</a></li>
+              <li><a href="shrines/persona.html">Persona</a></li>
+                <ul>
+                  <li><a href="shrines/persona/akechi.html">Akechi</a></li>
+                  <li><a href="shrines/persona/naoto.html">Naoto</a></li>
+                </ul>
+            </ul>
+          <li><a href="credits.html">Credits</a></li>
+          </u>  
+        </ul>
+      </div>
+      
+      <div class="rightsidebar">
+        <div class="meow">
+          <center><p>Add my button to your site!</p>
+            <a href="https://foolsgarden.neocities.org"><img src = "https://foolsgarden.neocities.org/images/fools-garden.png"></a>
+           <textarea style=width:80%;><a href="https://foolsgarden.neocities.org"><img src = "https://foolsgarden.neocities.org/images/fools-garden.png"></a></a></textarea></center>
+         </div>
+         <h2> </h2>
+         <div class="meow">
+            <p><center>YOU ARE VIEWER</center></p>
+            <!-- FC2カウンター ここから -->
+            <center><script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=38879184&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=38879184&main=1" /></noscript></center>
+            <!-- FC2カウンター ここまで -->
+         </div>
+         <h2> </h2>
+         <div class="currently">
+            <center><p>Currently</p>
+            <details>
+              <summary>Reading</summary>
+              Crime and Punishment (Fyodor Dostoesvky)
+            </details>
+            <details>
+              <summary>Watching</summary>
+              Better Call Saul
+            </details>
+            <details>
+              <summary>Playing</summary>
+              Persona 5 Royal, Pokemon Diamond
+            </details>
+            <details>
+              <summary>Listening to</summary>
+              I Would Rather (Jazz Emu)
+            </details>
+            <details>
+              <summary>Working on</summary>
+              My album!
+            </details>
+            <h2> </h2>
+            </center>
+         </div>
+         <h2> </h2>
+         <div class="meow">
+           <div class="updatebox">
+              <center>
+              <h3>Update Box</h3>
+              <p>12/07/2023 - Added a status.cafe box!</p>
+              <p>11/07/2023 - Hi, I'm back! Added a sitemap.</p>
+              <p>16/05/2023 - Added a Persona shrine</p>
+              <p>10/05/2023 - Added a "how well do you know the webmaster" quiz!</p>
+              <p>11/03/2023 - Changed the main font of this website to be more readable!</p>
+              <p>20/02/2023 - Added friend testimonials in the About page</p>
+              <p>20/02/2023 - Added an update box!</p>
+              </center>
+           </div>
+         </div>
+         <h2> </h2>
+         <div class="meow" style="font-size:12px;">
+           <center>
+           <h4> </h4>
+           <script language="JavaScript">
+            var LastUpdated = document.lastModified;
+            document.writeln ("This page was last updated " + LastUpdated);
+            </script>
+            </center>
+            <h4> </h4>
+         </div>
+      </div>
+    </div>
+  </body>
+</html>
+

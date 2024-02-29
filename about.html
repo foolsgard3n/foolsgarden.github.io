@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <title>~about me~</title>
+  <script>
+          var originalTitle;
+            var offFocusTitle = "please come back";
+            
+            var interval;
+            
+            document.addEventListener('visibilitychange', event => {
+                if(document.hidden) {
+                    originalTitle = document.title;
+                    document.title = offFocusTitle;
+                    
+                    let swapState = "old";
+                    interval = setInterval(function () {
+                        if(swapState == "old") {
+                            swapState = "new";
+                            document.title = offFocusTitle;
+                        }
+                        else if (swapState == "new") {
+                            swapState = "old";
+                            document.title = originalTitle;
+                        }
+                    }, 1300);
+                } else {
+                    document.title = originalTitle;
+                    clearInterval(interval);
+                }
+            });
+    </script>
+  <style>
+        body {
+          background-image: url("https://i.ibb.co/TPtyBYj/music023.jpg");
+      background-size: 250px; 
+      font-family: Caviar;
+      }
+      #container {
+        display: flex;
+      }
+      .mainbox {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            width: 700px;
+            height: 645px;
+            padding: 10px;
+            border: 5px double;
+            background-color: #f5d0b5;
+            float: left;
+            overflow:auto;
+      }
+      .leftsidebar {
+            margin-left: 125px;
+            margin-right: 35px;
+            margin-top: 25px;
+            margin-bottom:25px;
+            width: 150px;
+            height: auto;
+            padding: 10px;
+            border: 5px double;
+            background-color: #f5d0b5;
+            float: left;
+            height:645px;
+      }
+      .meow {
+        border: 5px double;
+        background-color: #f5d0b5;
+        margin: 0px;
+      }
+      .updatebox {
+        overflow:auto;
+        border: 5px, solid;
+        background-color:white;
+        margin-left: 5px;
+        margin-right:5px;
+        font-size: 10px;
+        font-family: Caviar;
+        width: auto;
+        height:75px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+         }
+        .testi{
+          background-color:#c48e82;
+          width:auto;
+          margin-top:0;
+          height:20px;
+        }
+     
+      * {cursor: url(https://cur.cursors-4u.net/others/oth-5/oth472.cur), auto !important;}
+      
+      
+       @font-face {
+      font-family: Caviar;
+      src: url(fonts/CaviarDreams.ttf);
+      }
+      
+      ::-webkit-scrollbar {
+        width: 5px;
+       }
+            
+     ::-webkit-scrollbar-track {
+       background: #f1f1f1; 
+      }
+             
+      ::-webkit-scrollbar-thumb {
+        background: #825e44; 
+       } 
+      ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+      }
+      a {
+        text-decoration:none;
+        color:black;
+        transition: 0.3s
+      }
+      a:hover {
+        color: white;
+      }
+   </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="leftsidebar">
+      <center>
+      <img src="https://foolsgarden.neocities.org/images/tumblr_n8gptm0DB71r7y61oo1_100.gif">
+      </center>
+      <h2> </h2>
+        <table style="border-collapse: collapse; width: 90%; margin-left: auto; margin-right: auto;">
+    <tbody><tr style="padding: 3px; background-color: #c48e82;">
+      <td style="padding: 3px;"><a href="index.html"><img src="https://foolsgarden.neocities.org/images/19a0911a.gif"> index</a></td>
+    </tr>
+    <tr style="padding: 3px;">
+      <td style="padding: 3px;"><a href="about.html"><img src="https://foolsgarden.neocities.org/images/tumblr_6dc9940c9248843047d2367f3050fae2_cdd2239e_75.gif"> about</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color:#c48e82;">
+      <td style="padding: 3px;"><a href="mansion/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_a9b612e691d1f2ece8e5201bb29d7e23_55bb3590_75.gif"> mansion</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color:#f5d0b5">
+      <td style="padding: 3px;"><a href="blog/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_b3a06ae05793737ca526e52dc754a21e_6156d4f3_75.gif"> blog</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color: #c48e82;">
+      <td style="padding: 3px;"><a href="shrines/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_fdb41db1f1f011a3b3cd06f70602ead1_8f1c9e4e_75.gif"> shrines</a></td>
+    </tr>
+    <tr style="padding: 3px;">
+      <td style="padding: 3px;"><a href="credits.html"><img src="https://foolsgarden.neocities.org/images/tumblr_fdb41db1f1f011a3b3cd06f70602ead1_8f1c9e4e_75.gif"> credits</a></td>
+    </tr>
+  </tbody></table>
+  <h2> </h2>
+  <center>
+  <img src="https://foolsgarden.neocities.org/images/blinkie1.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie2.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie3.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie4.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie5.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie6.gif">
+  </center>
+  <h2> </h2>
+      <table style="border-collapse: collapse; width: 90%; margin-left: auto; margin-right: auto; background-color:#c48e82;">
+        <tr style="padding: 3px;">
+          <td style="padding: 3px;"><a href="https://neocities.org/site/foolsgarden"><img src="https://foolsgarden.neocities.org/images/cat1.gif"> site profile</a></td>
+          </tr>
+        <tr style="padding: 3px; background-color:#c48e82;">
+          <td style="padding: 3px;"><a href="https://Elliotfueille.123guestbook.com"><img src="https://foolsgarden.neocities.org/images/cat2.gif"> guestbook</a></td>
+        </tr>
+      </tbody></table>
+      </div>
+      
+      <div class="mainbox">
+      <div class="testi">
+      <marquee>FRIEND TESTIMONIALS: "The only super smart, super skilled artist I know of" | "You're very poggers, and fantastic art" | "Am I just giving you a 5 star review" | "My friend Elliot is a cool dude who makes cool shit" | "Elliot is really cool and super fun to hang out with, he's smart and good at stuff like art and Pokemon and music which is cool" | "has cute cats" | "Biggest akechi fan on earth" | "Verypog reddit man draw the pixels real good" | "ur literally insane" | "Has a foot fetish otherwise he's alright 1/10"</marquee>
+      </div>
+        	<h1>The Garden Centerpiece</h1>
+                <p>Hello, my name's Elliot! I am a male student living in America.</p>
+                <p>I created a neocities to express myself, and more importantly, feed into my own ego. Neocities has always seemed very interesting to me, and I'm glad to have finally made a site!</p>
+                <h2>Fun facts about me:</h2>
+                <ol>
+                  <li>I can't die.</li>
+                  <li>Though I am a student, my profession is catboy. Apologies for any confusion this may cause.</li>
+                  <li>I won "Most Likely to Take Over the World" as a high school superlative.</li>
+                </ol>
+                <h2>Interests</h2>
+                 <details>
+                  <summary>
+                    Animals
+                  </summary>
+                  <ul>
+                    <li>Common Genet</li>
+                    <li>Tripod Fish</li>
+                    <li>Leafy Sea Slug</li>
+                  </ul>
+                </details>
+                 <details>
+                  <summary>
+                  Anime/Manga
+                  </summary>
+                    <ul>
+                      <li>SpyxFamily</li>
+                      <li>Fairy Tail</li>
+                      <li>Black Butler</li>
+                      <li>Sailor Moon</li>
+                      <li>Yuri on Ice</li>
+                      <li>Rurouni Kenshin</li>
+                    </ul>
+                  </details>
+               <details>
+                  <summary>
+                    Books
+                  </summary>
+                  <p>
+                    This is covered in the Library section of my <a href="mansion/index.html">mansion</a> tab.
+                  </p>
+                </details>
+                 <details>
+                  <summary>
+                    Food and Drink
+                  </summary>
+                  <ul>
+                    <li>Curry</li>
+                    <li>La Croix</li>
+                    <li>Hot Pot</li>
+                    <li>Earl Grey</li>
+                    <li>Boba</li>
+                    <li>Sushi</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>
+                    Games
+                  </summary>
+                  <ul>
+                    <li>Persona 5 Royal</li>
+                    <li>Transformice</li>
+                    <li>Persona 4 Golden</li>
+                    <li>Pokemon</li>
+                    <li>Slay the Spire</li>
+                    <li>Hollow Knight</li>
+                    <li>Celeste</li>
+                    <li>Blaseball</li>
+                    <li>Flight Rising</li>
+                    <li>Crab Champions</li>
+                    <li>Gris</li>
+                  </ul>
+                </details>
+                 <details>
+                  <summary>
+                    Hobbies
+                  </summary>
+                  <ul>
+                    <li>Knitting</li>
+                    <li>Crocheting</li>
+                    <li>Piano, violin, and guitar (badly)</li>
+                    <li>Music Composition</li>
+                    <li>Journaling/Scrapbooking</li>
+                    <li>Conlanging</li>
+                    <li>Visual Art (traditional & digital)</li>
+                    <li>Clock Collection</li>
+                    <li>Sewing & Embroidery</li>
+                  </ul>
+                </details>
+                 <details>
+                  <summary>
+                    Movies & TV Shows
+                  </summary>
+                  <ul>
+                    <li>Community</li>
+                    <li>Doctor Who</li>
+                    <li>Better Call Saul</li>
+                    <li>Arrested Development</li>
+                    <li>Cowboy Bebop</li>
+                    <li>The IT Crowd</li>
+                    <li>Tick, Tick, Boom!</li>
+                    <li>Literally anything but Sherlock (BBC). I hate that show more than words can describe. My loathing is INDESCRIBABLE.</li>
+                  </ul>
+                </details>
+                 <details>
+                  <summary>
+                    Music
+                  </summary>
+                  <ul>
+                    <li>Fish in a Birdcage</li>
+                    <li>Will Wood</li>
+                    <li>Anything jazz</li>
+                    <li>The Garages</li>
+                    <li>Value Select</li>
+                    <li>Casiopea</li>
+                  </ul>
+                </details>
+                <h3>contact me</h3>
+                <ul>
+                  <li>Discord: foolsgard3n</li>
+                  <li>Twitter: @foolsgard3n</li>
+                  <li>Instagram: @foolsgard3n</li>
+                  </ul>
+      </div>
+      
+    </div>
+  </body>
+</html>

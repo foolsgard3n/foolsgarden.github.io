@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>credits</title>
+  <script>
+          var originalTitle;
+            var offFocusTitle = "please come back";
+            
+            var interval;
+            
+            document.addEventListener('visibilitychange', event => {
+                if(document.hidden) {
+                    originalTitle = document.title;
+                    document.title = offFocusTitle;
+                    
+                    let swapState = "old";
+                    interval = setInterval(function () {
+                        if(swapState == "old") {
+                            swapState = "new";
+                            document.title = offFocusTitle;
+                        }
+                        else if (swapState == "new") {
+                            swapState = "old";
+                            document.title = originalTitle;
+                        }
+                    }, 1300);
+                } else {
+                    document.title = originalTitle;
+                    clearInterval(interval);
+                }
+            });
+    </script>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <style>
+        body {
+          background-image: url("https://i.ibb.co/TPtyBYj/music023.jpg");
+      background-size: 250px; 
+      font-family: Caviar;
+      }
+      #container {
+        display: flex;
+      }
+      .mainbox {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            width: 700px;
+            height: 645px;
+            padding: 10px;
+            border: 5px double;
+            background-color: #f5d0b5;
+            float: left;
+            overflow:auto;
+      }
+      .leftsidebar {
+            margin-left: 125px;
+            margin-right: 35px;
+            margin-top: 25px;
+            margin-bottom:25px;
+            width: 150px;
+            height: auto;
+            padding: 10px;
+            border: 5px double;
+            background-color: #f5d0b5;
+            float: left;
+            height:645px;
+      }
+      .meow {
+        border: 5px double;
+        background-color: #f5d0b5;
+        margin: 0px;
+      }
+      .updatebox {
+        overflow:auto;
+        border: 5px, solid;
+        background-color:white;
+        margin-left: 5px;
+        margin-right:5px;
+        font-size: 10px;
+        font-family: Caviar;
+        width: auto;
+        height:75px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+         }
+     
+      * {cursor: url(https://cur.cursors-4u.net/others/oth-5/oth472.cur), auto !important;}
+    
+       @font-face {
+      font-family: Caviar;
+      src: url(fonts/CaviarDreams.ttf);
+      }
+      
+      ::-webkit-scrollbar {
+        width: 5px;
+       }
+            
+     ::-webkit-scrollbar-track {
+       background: #f1f1f1; 
+      }
+             
+      ::-webkit-scrollbar-thumb {
+        background: #825e44; 
+       } 
+      ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+      }
+      a {
+        text-decoration:none;
+        color:black;
+        transition: 0.3s
+      }
+      a:hover {
+        color: white;
+      }
+   </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="leftsidebar">
+      <center>
+      <img src="https://foolsgarden.neocities.org/images/tumblr_n8gptm0DB71r7y61oo1_100.gif">
+      </center>
+      <h2> </h2>
+        <table style="border-collapse: collapse; width: 90%; margin-left: auto; margin-right: auto;">
+    <tbody><tr style="padding: 3px; background-color: #c48e82;">
+      <td style="padding: 3px;"><a href="index.html"><img src="https://foolsgarden.neocities.org/images/19a0911a.gif"> index</a></td>
+    </tr>
+    <tr style="padding: 3px;">
+      <td style="padding: 3px;"><a href="about.html"><img src="https://foolsgarden.neocities.org/images/tumblr_6dc9940c9248843047d2367f3050fae2_cdd2239e_75.gif"> about</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color:#c48e82;">
+      <td style="padding: 3px;"><a href="mansion/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_a9b612e691d1f2ece8e5201bb29d7e23_55bb3590_75.gif"> mansion</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color:#f5d0b5">
+      <td style="padding: 3px;"><a href="blog/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_b3a06ae05793737ca526e52dc754a21e_6156d4f3_75.gif"> blog</a></td>
+    </tr>
+    <tr style="padding: 3px; background-color: #c48e82;">
+      <td style="padding: 3px;"><a href="shrines/index.html"><img src="https://foolsgarden.neocities.org/images/tumblr_fdb41db1f1f011a3b3cd06f70602ead1_8f1c9e4e_75.gif"> shrines</a></td>
+    </tr>
+    <tr style="padding: 3px;">
+      <td style="padding: 3px;"><a href="credits.html"><img src="https://foolsgarden.neocities.org/images/tumblr_fdb41db1f1f011a3b3cd06f70602ead1_8f1c9e4e_75.gif"> credits</a></td>
+    </tr>
+  </tbody></table>
+  <h2> </h2>
+  <center>
+  <img src="https://foolsgarden.neocities.org/images/blinkie1.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie2.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie3.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie4.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie5.gif">
+  <img src="https://foolsgarden.neocities.org/images/blinkie6.gif">
+  </center>
+  <h2> </h2>
+      <table style="border-collapse: collapse; width: 90%; margin-left: auto; margin-right: auto; background-color:#c48e82;">
+        <tr style="padding: 3px;">
+          <td style="padding: 3px;"><a href="https://neocities.org/site/foolsgarden"><img src="https://foolsgarden.neocities.org/images/cat1.gif"> site profile</a></td>
+          </tr>
+        <tr style="padding: 3px; background-color:#c48e82;">
+          <td style="padding: 3px;"><a href="https://basilfueille.123guestbook.com"><img src="https://foolsgarden.neocities.org/images/cat2.gif"> guestbook</a></td>
+        </tr>
+      </tbody></table>
+      </div>
+      
+      <div class="mainbox">
+      <h1>Credits to:</h1>
+      <ul>
+      <li>Main Page Background: <u><a href="https://www.freepik.com/free-vector/white-floral-abstract-organic-patterns-seamless-pattern_66813965.htm#query=black%20and%20white%20pattern&position=18&from_view=keyword&track=ais&uuid=d712c0ac-b7c8-4e66-b9a0-4b47094ff613">"Free vector white floral abstract organic patterns seamless pattern"</a></u> by vector_corp / Brightness/contrast changed from original</li>
+      <li><a href="https://eggramen.neocities.org/code/css_testpages"><u>EggRamen</u></a> for my blog's layout!</li>
+      <li><a href="https://zonelets.net"><u>Zonelets</u></a> for the JavaScript running my blog.</li>
+      <li><a href="https://www.cursors-4u.com"><u>Cursors4u</u></a> for the site's cursors.</li>
+      </ul>
+      </div>
+      
+    </div>
+  </body>
+</html>
